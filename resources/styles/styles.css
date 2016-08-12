@@ -5,3 +5,8 @@ h1 {
 .selected {
   color: orange;
 }
+
+.new-meal, .edit-meal {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

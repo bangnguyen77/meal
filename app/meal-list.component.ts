@@ -8,11 +8,17 @@ import { Meal } from './meal.model';
   directives: [MealComponent],
   template: `
     <meal-display *ngFor="#currentMeal of mealList"
-      [meal]="currentMeal">
+      [meal]="currentMeal" (click)="mealClicked(currentMeal)"
+      [class.selected]="currentMeal === selectedMeal">
     </meal-display>
   `
 })
 
 export class MealListComponent {
-  
+  public mealList: Meal[];
+  public selectedMeal: Meal;
+
+  mealClicked(meal: Meal): void {
+    this.selectedMeal = meal;
+  }
 }

@@ -12,7 +12,7 @@ import { CaloriesPipe } from './calories.pipe';
     <select (change)="onCaloriesChange($event.target.value)">
       <option value="all">View All Meals</option>
       <option value="high">View High Calories Meals</option>
-      <option value="Low">View Low Calories Meals</option>
+      <option value="low">View Low Calories Meals</option>
     </select>
     <meal-display *ngFor="#currentMeal of mealList | calories:caloriesFilter"
       [meal]="currentMeal" (click)="mealClicked(currentMeal)"
